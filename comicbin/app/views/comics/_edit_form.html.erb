@@ -2,19 +2,8 @@
   <div class='well'>
 
     <!-- WRITE THE CORRECT FORM HEADER AND BLOCK USING ERB -->
-    <% if @comic.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@comic.errors.count, "error") %> prohibited this comic from being saved:</h2>
-
-        <ul>
-        <% @comic.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %> 
     
-
+    <input type="hidden" name="comic__id" value= <%= @comic.id %> >
     <div class="form-group">
       <!-- DISPLAY A TITLE LABEL -->
       <!-- DISPLAY A TEXT FIELD AND ATTACH THE CLASS OF 'form-control' TO THIS FIELD -->
@@ -35,7 +24,7 @@
     </div>
     <div class="actions">
       <!-- DISPLAY A SUBMIT BUTTON WITH A CLASS OF 'btn btn-primary' -->
-      <button type="submit" class="btn btn-default">Create Comic</button>
+      <button type="submit" class="btn btn-default">Save</button>
     </div>
 
   

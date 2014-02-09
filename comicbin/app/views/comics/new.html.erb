@@ -4,8 +4,12 @@
 
 <div class='row'>
   <!-- RENDER THE FORM PARTIAL HERE. -->
+  <form action="/comics/create">
+      <%= render "form" %>
+  </form>
 </div>
 
+
 <div class='container'>
-  <%= link_to 'Back to all comics', comics_path %>
+  <%= link_to 'Back to all comics', "/comics" %>
 </div>

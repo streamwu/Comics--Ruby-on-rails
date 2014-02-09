@@ -2,11 +2,14 @@
   <h2>Edit comic</h2>
 </div>
 
-<div class='row'>
+<div class="row" >
   <!-- RENDER THE FORM PARTIAL HERE. -->
+  <form action = "/comics/alter" method="get">
+      <%= render "edit_form"  %>
+  </form>
 </div>
 
 <div class='container'>
-  <%= link_to 'Show comic', @comic %>
-  <%= link_to 'Back to all comics', comics_path %>
+  <%= link_to 'Show comic', "/comics/#{@comic.id}" %><br>
+  <%= link_to 'Back to all comics', "/comics" %>
 </div>
